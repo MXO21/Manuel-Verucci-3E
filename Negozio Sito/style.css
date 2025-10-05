@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: #212529;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 50px;
+}
+
+.navbar h2 {
+    color: #ffb742;
+    font-weight: 600;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+ul{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li:hover a {
+    color: #212529;
+}
+
+.navbar ul li:last-child a {
+    margin: 0;
+}
+
+.bottone{
+    display: block;
+    background: #ffb742;
+    padding: 6px 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.bottone:hover{
+    background: #fb8c00;
+}
+
+.logo{
+    width: 250px;
+    padding-right: 100px;
+    padding-top: 80px;
+    display: flex;
+    position:absolute;
+}
+
+.prodotti{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background: #142d4a;
+    height: 450px;
+    width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 20px;
+    margin-left: 70vb;
+    margin-top: 10vb;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --deg {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(from var(--deg) at center,
+            #0a0a0a,
+            #2c2c2c,
+            #bfbfbf,
+            #f5f5f5,
+            #7d7d7d);
+    border-radius: inherit;
+    z-index: -2;
+    padding: 2px;
+    animation: autoRotate 3s linear infinite;
+}
+
+.card::after {
+    filter: blur(10px);
+}
+
+@keyframes autoRotate {
+    to {
+        --deg: 360deg;
+    }
+}
+
+.Foto{
+    width: 100px;
+}
